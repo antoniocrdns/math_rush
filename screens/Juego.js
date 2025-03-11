@@ -69,7 +69,7 @@ const Juego = ({ route, navigation }) => {
         break;
     }
 
-    // Crear opciones de respuesta (incluyendo la correcta)
+    // Crear opciones de respuesta
     const randomOptions = [correctAnswer];
     while (randomOptions.length < 4) {
       const randomOption = Math.floor(Math.random() * 20) + 1;

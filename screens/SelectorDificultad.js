@@ -3,9 +3,7 @@ import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
 
 const SelectorDificultad = ({ navigation }) => {
 
-  // Navegar al juego con el nivel de dificultad
   const handleSelectDifficulty = (difficulty) => {
-    // Asegúrate de pasar 'difficulty' correctamente
     navigation.navigate('Juego', { difficulty });
   };
 
@@ -14,22 +12,22 @@ const SelectorDificultad = ({ navigation }) => {
       <Text style={styles.title}>Selecciona la dificultad</Text>
 
       <TouchableOpacity
-        style={[styles.button, { backgroundColor: '#28a745' }]}  // Verde para dificultad 1
-        onPress={() => handleSelectDifficulty(1)}  // Pasamos dificultad 1
+        style={[styles.button, { backgroundColor: '#28a745' }]}
+        onPress={() => handleSelectDifficulty(1)} 
       >
         <Text style={styles.buttonText}>Nivel 1</Text>
       </TouchableOpacity>
       
       <TouchableOpacity
-        style={[styles.button, { backgroundColor: '#ffc107' }]}  // Amarillo para dificultad 2
-        onPress={() => handleSelectDifficulty(2)}  // Pasamos dificultad 2
+        style={[styles.button, { backgroundColor: '#ffc107' }]}
+        onPress={() => handleSelectDifficulty(2)}
       >
         <Text style={styles.buttonText}>Nivel 2</Text>
       </TouchableOpacity>
 
       <TouchableOpacity
-        style={[styles.button, { backgroundColor: '#dc3545' }]}  // Rojo para dificultad 3
-        onPress={() => handleSelectDifficulty(3)}  // Pasamos dificultad 3
+        style={[styles.button, { backgroundColor: '#dc3545' }]} 
+        onPress={() => handleSelectDifficulty(3)} 
       >
         <Text style={styles.buttonText}>Nivel 3</Text>
       </TouchableOpacity>

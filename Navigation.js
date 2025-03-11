@@ -4,7 +4,6 @@ import { NavigationContainer } from '@react-navigation/native';
 import { ThemeProvider } from './context/ThemeContext';
 import { ScoreProvider } from './context/ScoreContext';
 
-// Importamos las pantallas
 import MenuPrincipal from './screens/MenuPrincipal';
 import SelectorDificultad from './screens/SelectorDificultad';
 import Juego from './screens/Juego';
@@ -24,7 +23,7 @@ const Navigation = () => {
                         <Stack.Screen 
                         name="MenuPrincipal" 
                         component={MenuPrincipal} 
-                        options={{ headerShown: false }}  // Esconde el encabezado por defecto
+                        options={{ headerShown: false }}
                         />
                         <Stack.Screen 
                         name="SelectorDificultad" 

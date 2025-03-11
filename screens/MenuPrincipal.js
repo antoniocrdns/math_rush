@@ -1,9 +1,8 @@
 import React from 'react';
 import { View, Text, TouchableOpacity, StyleSheet, SafeAreaView } from 'react-native';
-import { useTheme } from '../context/ThemeContext'; // Importamos el hook del tema
-
+import { useTheme } from '../context/ThemeContext';
 const MenuPrincipal = ({ navigation }) => {
-  const { darkMode } = useTheme(); // Obtenemos el estado del tema
+  const { darkMode } = useTheme();
 
   return (
     <SafeAreaView style={[styles.container, darkMode ? styles.darkMode : styles.lightMode]}>
@@ -45,7 +44,7 @@ const MenuPrincipal = ({ navigation }) => {
 
         <TouchableOpacity 
           style={[styles.gridButton, styles.exitButton]} 
-          onPress={() => alert('Saliendo de la app...')}  // Aquí puedes manejar el cierre de la app
+          onPress={() => alert('Saliendo de la app...')} // No funciona
         >
           <Text style={styles.exitButtonText}>Salir</Text>
         </TouchableOpacity>
@@ -62,31 +61,31 @@ const styles = StyleSheet.create({
     padding: 20,
   },
   lightMode: {
-    backgroundColor: '#f7f7f7',  // Fondo blanco suave para el modo claro
+    backgroundColor: '#f7f7f7',
   },
   darkMode: {
-    backgroundColor: '#333',  // Fondo oscuro para el modo oscuro
+    backgroundColor: '#333',
   },
   title: {
     fontSize: 48,
     fontWeight: 'bold',
-    color: 'red',  // Título en color rojo
-    marginBottom: 50,  // Separación con los botones
+    color: 'red',
+    marginBottom: 50,
   },
   button: {
-    backgroundColor: '#007bff',  // Color azul para los botones
+    backgroundColor: '#007bff',
     paddingVertical: 15,
     paddingHorizontal: 30,
     borderRadius: 10,
     marginBottom: 15,
     alignItems: 'center',
-    justifyContent: 'center',  // Asegura que el texto esté centrado vertical y horizontalmente
-    width: '80%',  // El botón tomará todo el ancho disponible
+    justifyContent: 'center',
+    width: '80%',
   },
   playButton: {
-    backgroundColor: '#0056b3',  // Un azul más oscuro para el botón de "Jugar"
+    backgroundColor: '#0056b3',
     fontSize: 20,
-    marginBottom: 30,  // Separación con los botones de la cuadrícula
+    marginBottom: 30,
   },
   buttonText: {
     fontSize: 20,
@@ -94,23 +93,23 @@ const styles = StyleSheet.create({
     color: 'white',
   },
   grid: {
-    flexDirection: 'row',  // Distribuye los botones en filas horizontales
-    flexWrap: 'wrap',  // Permite que los botones se ajusten en múltiples filas
-    justifyContent: 'space-between',  // Espacio entre botones
-    width: '80%',  // Limita el ancho de la cuadrícula a 80% de la pantalla
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    justifyContent: 'space-between',
+    width: '80%',
   },
   gridButton: {
-    backgroundColor: '#007bff',  // Color azul para los botones
+    backgroundColor: '#007bff',
     paddingVertical: 15,
     paddingHorizontal: 30,
     borderRadius: 10,
     marginBottom: 15,
-    alignItems: 'center',  // Centra el texto horizontalmente
-    justifyContent: 'center',  // Centra el texto verticalmente
-    width: '48%',  // Cada botón ocupa el 48% del ancho del contenedor, ajustándose a la cuadrícula
+    alignItems: 'center',
+    justifyContent: 'center', 
+    width: '48%',
   },
   exitButton: {
-    backgroundColor: '#e60000',  // Rojo para el botón de salir
+    backgroundColor: '#e60000', 
   },
   exitButtonText: {
     fontSize: 20,

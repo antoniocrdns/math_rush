@@ -12,10 +12,6 @@ const FinJuego = ({ route, navigation }) => {
       return;
     }
 
-    // Aquí se guardaría el puntaje en la base de datos o AsyncStorage
-    // Ejemplo: guardado en la base de datos o en un arreglo global
-
-    // Luego de guardar, redirigimos a la pantalla de Marcadores
     navigation.navigate('Marcadores');
   };
 
